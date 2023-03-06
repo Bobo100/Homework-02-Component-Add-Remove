@@ -1,4 +1,3 @@
-import React from 'react';
 import './css/App.css';
 import {
   BrowserRouter as Router,
