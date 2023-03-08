@@ -118,7 +118,7 @@ const DragAndDropList = () => {
 
 
             {items.map((item, index) => (
-                // 增加 draggable 屬性
+                // 增加 draggable 屬性，讓元素可以被拖動
                 <div key={uuid()} className="border padding flex center" draggable="true"
                     // 綁定事件
                     onDragStart={(event) => handleDragStart(event, index)}
