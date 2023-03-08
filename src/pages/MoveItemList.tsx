@@ -68,6 +68,13 @@ const MoveItemList = () => {
         moveItem(index, newIndex);
     };
 
+    // 移除當前的item
+    const handleRemoveItemClick = (index: number) => () => {
+        // 把非當前的item過濾出來
+        setItems(prevState => prevState.filter((_, i) => i !== index));
+        setItemIndexes(prevState => prevState.filter((_, i) => i !== index));
+    };
+
     // 每個div都有兩個button去移動當前的div
     // 如果第一個div的button被點擊，則不會有任何反應
     // 如果最後一個div的button被點擊，則不會有任何反應
@@ -92,6 +99,7 @@ const MoveItemList = () => {
                     >
                         Move Down
                     </button>
+                    <button onClick={handleRemoveItemClick(index)} className="remove_btn">Remove item</button>
                 </div>
             ))}
         </div>
