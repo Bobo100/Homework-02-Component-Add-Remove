@@ -7,7 +7,7 @@ import {
 
 import { Home } from './pages/Home';
 import { NotFoundPage } from './pages/Error';
-import { MoveItemList } from './pages/MoveItemList';
+import MoveItemList from './pages/MoveItemList';
 import DragAndDropList from './pages/DragAndDropList';
 
 function App() {

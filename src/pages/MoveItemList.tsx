@@ -9,7 +9,7 @@ type Item = {
     text: string;
 };
 
-export const MoveItemList = () => {
+const MoveItemList = () => {
     // 這個state是用來記錄每個item的內容
     const [items, setItems] = useState<Item[]>([
         { id: "1", text: "Option 1" },
@@ -97,3 +97,5 @@ export const MoveItemList = () => {
         </div>
     );
 };
+
+export default MoveItemList;
