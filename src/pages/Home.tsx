@@ -23,7 +23,8 @@ export const Home = () => {
         <div className='home page_styles'>
             <AddButton onClick={handleAddClick} />
             <RemoveButton onClick={handleRemoveClick} />
-            <NavLink to="/adv" className="link">Advanced Test</NavLink>
+            <NavLink to="/moveItemList" className="link">前往Move Item List</NavLink>
+            <NavLink to="/dragAndDropList" className="link">前往Drag And Drop List</NavLink>
 
             {Array.from({ length: count }, (_, index) => (
                 <div key={uuid()} className="border">Option {index + 1}</div>

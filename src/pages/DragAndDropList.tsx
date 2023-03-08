@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { AddButton } from "./component/AddButon";
 import { RemoveButton } from "./component/RemoveButton";
 import uuid from "react-uuid";
+import { NavLink } from "react-router-dom";
 
 // 加上button 去移動當前的div
-const AdvTest = () => {
+const DragAndDropList = () => {
     const [count, setCount] = useState(3);
 
     const handleAddClick = () => {
@@ -32,6 +33,9 @@ const AdvTest = () => {
         <div className="page_styles">
             <AddButton onClick={handleAddClick} />
             <RemoveButton onClick={handleRemoveClick} />
+            <NavLink to="/" className="link">
+                回到Home
+            </NavLink>
 
             {Array.from({ length: count }, (_, index) => (
                 <div key={uuid()} className="border padding flex center">
@@ -44,4 +48,4 @@ const AdvTest = () => {
     );
 };
 
-export default AdvTest;
+export default DragAndDropList;

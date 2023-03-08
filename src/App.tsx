@@ -7,7 +7,8 @@ import {
 
 import { Home } from './pages/Home';
 import { NotFoundPage } from './pages/Error';
-import AdvTest from './pages/AdvTest';
+import { MoveItemList } from './pages/MoveItemList';
+import DragAndDropList from './pages/DragAndDropList';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Router basename="/Homework-02-Component-Add-Remove">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/adv" element={<AdvTest />} />
+          <Route path="/moveItemList" element={<MoveItemList />} />
+          <Route path="/dragAndDropList" element={<DragAndDropList />} />
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
       </Router>

@@ -54,5 +54,3 @@ const DragAndDropList: React.FC<Props> = ({ items, setItems }) => {
         </div>
     )
 }
-
-export default DragAndDropList;
