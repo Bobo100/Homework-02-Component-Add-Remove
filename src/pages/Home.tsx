@@ -1,8 +1,9 @@
+import "./css/Home.scss"
 import { useState } from 'react';
 import { AddButton } from './component/AddButon';
 import { RemoveButton } from './component/RemoveButton';
 import uuid from 'react-uuid';
-import "./css/Home.css"
+import { NavLink } from 'react-router-dom';
 export const Home = () => {
     const [count, setCount] = useState(3);
 
@@ -19,9 +20,11 @@ export const Home = () => {
         });
     };
     return (
-        <div className='home'>
+        <div className='home page_styles'>
             <AddButton onClick={handleAddClick} />
             <RemoveButton onClick={handleRemoveClick} />
+            <NavLink to="/adv" className="link">Advanced Test</NavLink>
+
             {Array.from({ length: count }, (_, index) => (
                 <div key={uuid()} className="border">Option {index + 1}</div>
             ))}
